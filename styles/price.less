@@ -1,0 +1,131 @@
+@import "variables-and-mixins";
+
+html{
+  body{
+    main{
+      article{
+        margin-bottom: 30px;
+        position: relative;
+
+        a{
+          position: absolute;
+          right: 0;
+          top: 5px;
+        }
+
+        table{
+          display: table;
+          width: 100%;
+
+          caption{
+            width: 100%;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 2rem;
+            padding: 0 5px 5px 5px;
+            color: @base-blue;
+          }
+
+          tr{
+            text-align: center;
+            display: table-row;
+
+            th{
+              display: table-cell;
+              padding: 20px;
+              color: #ffffff;
+              background: @base-blue;
+              border: 1px solid rgb(201, 201, 201);
+              vertical-align: middle;
+            }
+
+            td{
+              display: table-cell;
+              color: black;
+              background: white;
+              padding: 20px;
+              border: 1px solid gray;
+              vertical-align: middle;
+              position: relative;
+
+              img{
+                position: absolute;
+                z-index: 10;
+                left: 300px;
+                top: -40px;
+                .transition(.5s);
+                opacity: 0;
+                box-shadow: 0 0 10px @base-dark-gray-rgba;
+              }
+
+              &:hover{
+                img{
+                  opacity: 1;
+                }
+              }
+
+              &.with-a-picture{
+                text-decoration: underline;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+
+        &.info{
+          text-align: left;
+          border: none;
+
+          em{
+            font-weight: bold;
+            margin: 10px 0;
+            display: block;
+          }
+
+          p{
+            text-align: left;
+            color: @base-black;
+            font-size: 1.6rem;
+            line-height: 110%;
+          }
+
+          table{
+            margin: 20px auto;
+
+            td{
+              padding: 10px;
+              background: none;
+              text-align: left;
+              border-top: none;
+              border-left: none;
+              border-right: none;
+              border-bottom: 1px solid @base-dark-gray;
+            }
+          }
+
+          b{
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 680px){
+  html{
+    body{
+      main{
+        section{
+          article{
+            &.info{
+              p{
+                font-size: 1em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

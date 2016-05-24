@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Acril-stone</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!--Веб-апп на весь экран устройства-->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!--Веб-апп на весь экран устройства END-->
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <!--Плитки для рабочего стола wp-->
+    <meta name="msapplication-TileColor" content="#1E5799"/>
+    <meta name="msapplication-TileImage" content="../images/favicon.png"/>
+    <!--Плитки для рабочего стола wp END-->
+    <!--Иконка для рабочего стола в iOS и Android-->
+    <link rel="apple-touch-icon" href="../images/favicon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/favicon.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/favicon.png">
+    <!--Иконка для рабочего стола в iOS и Android END-->
+    <!--Иконка загрузки сайта с рабочего стола для iOS и Android-->
+    <link rel="apple-touch-startup-image" href="../images/favicon.png">
+    <!--Иконка загрузки сайта с рабочего стола для iOS и Android END-->
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/default.css">
+    <link rel="stylesheet" href="../styles/contacts.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Play&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+    <script src="../scripts/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header>
+    <section>
+        <article class="top clear">
+            <a href="../index.html" class="logo">Acril-stone</a>
+            <div id="dropdown-menu">&#9776;</div>
+            <nav>
+                <a href="products.html">Продукция</a>
+                <a href="galery.html">Галерея</a>
+                <a href="colors.html">Цвета</a>
+                <a href="price.html">Цены</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+        </article>
+    </section>
+</header>
+    <main>
+        <section class="clear">
+            <h2>Контакты</h2>
+                <article class="contacts">
+                    <div class="email">
+                        <h3>E-mail</h3>
+                        <a href="mailto:acril-ston@rambler.ru">acril-ston@rambler.ru</a>
+                    </div>
+                    <div class="phone">
+                        <h3>Телефон</h3>
+                        <span>+7(910)606-38-33<img src="../images/mts.png" alt="Значок мтс"></span>
+                        <span>+7(910)867-85-68<img src="../images/mts.png" alt="Значок мтс"></span>
+                    </div>
+                    <div class="addres">
+                        <h3>Адрес</h3>
+                        <span>г. Калуга, 2-й Академический проезд 15</span>
+                    </div>
+                </article>
+                <article class="map">
+                    <h3>Карта</h3>
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=72pWGA9Fia511By4SAix7yqfykXViozQ&width=100%&height=350&lang=ru_RU&sourceType=constructor&scroll=true"></script>
+                </article>
+                <article class="feedback">
+                    <h3>Обратная связь</h3>
+                    <form action = "../post.php" method = "POST">
+                        <input name="name" type="text" class="feedback-input name" placeholder="Имя *" required aria-required="true">
+                        <input name="email" type="email" class="feedback-input email" placeholder="E-mail *" required aria-required="true">
+                        <input name="phone" type="tel" class="feedback-input phone" placeholder="Телефон">
+                        <textarea name="text" placeholder="Сообщение" required aria-required="true"></textarea>
+                        <input type="submit" value="Отправить" class="button">
+                    </form>
+                </article>
+        </section>
+    </main>
+    <footer>
+        <section class="copyright">
+            <p>
+                ИП Васильева А.В.<br>
+            </p>
+            <em>
+                Copyright @ 2016
+            </em>
+            <a href="http://vk.com/sky_ax" class="made" target="_blank">Разработчик</a>
+        </section>
+    </footer>
+    <!--Остальные скрипты страницы-->
+    <script type="text/javascript" src="../scripts/script.js"></script>
+</body>
+</html>

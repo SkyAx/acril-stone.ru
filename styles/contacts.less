@@ -1,0 +1,207 @@
+@import "variables-and-mixins";
+
+html{
+  body{
+    main{
+      section{
+        text-align: center;
+        padding: 0 20px;
+
+        h2{
+          margin-top: 20px;
+        }
+
+        .contacts{
+          width: 27%;
+          float: left;
+          font-size: 1.5rem;
+
+          div{
+            font-size: 1.2em;
+            line-height: 150%;
+            display: block;
+            vertical-align: top;
+            margin-bottom: 60px;
+
+            &:last-child{
+              margin-bottom: 0;
+            }
+          }
+
+          .email{
+            a{
+              font-size: 1.1em;
+              color: @base-dark-gray;
+              display: inline-block;
+              text-decoration: underline;
+              background: url("../images/email.png") no-repeat left center;
+              background-size: 30px;
+              padding-left: 30px;
+            }
+          }
+
+          .phone{
+            span{
+              display: block;
+              margin-bottom: 20px;
+
+              img{
+                margin-left: 5px;
+                height: 15px;
+              }
+            }
+          }
+        }
+
+        .map{
+          display: inline-block;
+          width: 36%;
+        }
+
+        .feedback{
+          float: right;
+          width: 30%;
+
+          form{
+            margin: 0 auto;
+            width: 100%;
+            padding: 0 20px 20px;
+
+            .feedback-input{
+              width: 100%;
+              color: @base-dark-gray;
+              font-size: 1.4rem;
+              border-radius: 0;
+              line-height: 20px;
+              background-color: transparent;
+              border: 2px solid @base-dark-gray-rgba;
+              padding: 5px 0 5px 5px;
+              margin-bottom: 10px;
+              outline: none;
+
+              &:focus{
+                border: 2px solid @base-blue;
+                color: @base-dark-gray;
+                outline: none;
+              }
+
+              &:focus:invalid{
+                background-color: salmon;
+              }
+
+              &::-webkit-input-placeholder{
+                color: @base-blue;
+              }
+
+              &::-moz-placeholder{
+                color: @base-blue;
+              }
+
+              &:-moz-placeholder{
+                color: @base-blue;
+              }
+
+              &:-ms-input-placeholder{
+                color: @base-blue;
+              }
+            }
+
+            textarea{
+              display: inline-block;
+              width: 100%;
+              height: 152px;
+              line-height: 150%;
+              resize: vertical;
+              color: @base-dark-gray;
+              font-size: 1.6rem;
+              border-radius: 0;
+              background-color: transparent;
+              border: 2px solid @base-dark-gray-rgba;
+              padding: 10px 0 10px 10px;
+              margin-bottom: 15px;
+
+              &:focus{
+                border: 2px solid @base-blue;
+                color: @base-dark-gray;
+                outline: none;
+              }
+
+              &::-webkit-input-placeholder{
+                color: @base-blue;
+              }
+
+              &::-moz-placeholder{
+                color: @base-blue;
+              }
+
+              &:-moz-placeholder{
+                color: @base-blue;
+              }
+
+              &:-ms-input-placeholder{
+                color: @base-blue;
+              }
+            }
+
+            .button {
+              width: 100%;
+              cursor: pointer;
+              background-color: @base-blue;
+              color: white;
+              font-size: 2rem;
+              padding: 12px 0;
+              .transition(all 0.3s);
+              font-weight: 200;
+              border: 1px solid transparent;
+              box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+              outline: 1px solid rgba(255, 255, 255, .5);
+              outline-offset: 0;
+              text-shadow: none;
+              .transition(pulse 1s infinite cubic-bezier(0.6, 0, 0, 1));
+
+              &:hover {
+                color: @base-blue;
+                background: @base-white-rgba;
+                border: 1px solid;
+                box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+                outline-color: rgba(255, 255, 255, 0);
+                outline-offset: 15px;
+                text-shadow: 1px 1px 2px #427388;
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px){
+  html{
+    body{
+      main{
+        section{
+          article{
+            &.contacts{
+              width: 100%;
+              display: block;
+              float: none;
+            }
+
+            &.map{
+              width: 100%;
+              display: block;
+            }
+
+            &.feedback{
+              width: 100%;
+              display: block;
+              float: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

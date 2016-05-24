@@ -1,0 +1,412 @@
+@import "variables-and-mixins";
+
+
+html{
+  body{
+    header{
+      section {
+        .bottom{
+          text-align: center;
+          position: relative;
+          padding-bottom: 20px;
+
+          .phone{
+            display: inline-block;
+            position: absolute;
+            text-align: left;
+            bottom: 0;
+            left: 40px;
+            margin: 20px auto;
+            font-size: 1.2em;
+            color: @base-white;
+            line-height: 150%;
+
+            div{
+              span{
+                vertical-align: middle;
+              }
+              img{
+                vertical-align: middle;
+                height: 18px;
+              }
+            }
+          }
+
+          .go{
+            border: 1px solid @base-white;
+            box-shadow: 0 0 0 0 @base-white, inset 0 1px 0 @base-white-rgba;
+            display: block;
+            margin: 0 auto;
+            background: @base-blue-rgba;
+            width: 260px;
+            padding: 20px;
+            font-size: 2.3rem;
+            .animation(pulse 1s infinite cubic-bezier(0.6, 0, 0, 1));
+
+            &:hover{
+              .animation(none);
+            }
+          }
+        }
+      }
+    }
+
+    main{
+      section{
+        article{
+
+          .head{
+
+            .description{
+              width: 100%;
+              vertical-align: top;
+              display: inline-block;
+              text-align: left;
+
+              img{
+                float: left;
+                display: inline-block;
+                width: 30%;
+                box-shadow: 0 0 10px 0 @base-black;
+              }
+
+              p{
+                width: 67%;
+                display: inline-block;
+                text-align: left;
+                padding: 0;
+              }
+            }
+          }
+
+          ul{
+            margin: 30px auto;
+
+            li{
+              vertical-align: top;
+            }
+          }
+
+
+          &.swiper-container{
+            width: 100%;
+            box-shadow: 0 0 10px 0 @base-black;
+            border-bottom: none;
+            height: 350px;
+            padding: 0;
+
+            .swiper-wrapper{
+              margin: 0;
+
+              .swiper-slide{
+                padding: 0;
+                min-height: 300px;
+                text-align: center;
+                -webkit-background-size: cover;
+                background-size: cover;
+
+                p{
+                  width: 100%;
+                  height: inherit;
+                  background: @base-black-rgba;
+                  font-size: 2.3em;
+                  color: white;
+                  font-family: 'Play', sans-serif;
+                  .transition(all 1.5s ease);
+                  text-transform: uppercase;
+                  /* Center slide text vertically */
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: -webkit-flex;
+                  display: flex;
+                  -webkit-box-pack: center;
+                  -ms-flex-pack: center;
+                  -webkit-justify-content: center;
+                  justify-content: center;
+                  -webkit-box-align: center;
+                  -ms-flex-align: center;
+                  -webkit-align-items: center;
+                  align-items: center;
+
+                  &:hover{
+                    cursor: pointer;
+                    background: none;
+                    text-shadow: 0 0 10px @base-black;
+                  }
+                }
+
+                &.first{
+                  background: url("../images/first-slide.jpg") no-repeat center;
+                }
+                
+                &.second{
+                  background: url("../images/second-slide.jpg") no-repeat center;
+                }
+
+                &.third{
+                  background: url("../images/third-slide.jpg") no-repeat center;
+                }
+
+                &.fourth{
+                  background: url("../images/fourth-slide.jpg") no-repeat center;
+                }
+
+                &.fifth{
+                  background: url("../images/fifth-slide.jpg") no-repeat center;
+                }
+              }
+            }
+          }
+
+          &.intro{
+            border: none;
+            p{
+              text-align: justify;
+              font-size: 2rem;
+              font-family: 'Play', sans-serif;
+            }
+          }
+
+          &.advantages{
+
+            .description{
+              p{
+                margin-left: 3%;
+              }
+            }
+
+            li{
+              width: 32%;
+              display: inline-block;
+              height: 200px;
+              margin: .3%;
+              padding: 0;
+              position: relative;
+              cursor: pointer;
+
+              img{
+                display: inline-block;
+                margin: 0;
+                position: absolute;
+                left: 33%;
+                .transition(.5s ease);
+              }
+
+              p{
+                position: absolute;
+                top: 35px;
+                font-size: 1.2em;
+                .transition(.5s ease);
+                .scale(0);
+                opacity: 0;
+              }
+
+              &:hover{
+
+                img{
+                  .scale(0);
+                  opacity: 0;
+                }
+
+                P{
+                  .scale(1);
+                  opacity: 1;
+                }
+              }
+            }
+          }
+
+
+          &.exploitation{
+
+            .description{
+
+              img{
+                float: right;
+              }
+            }
+
+            ul{
+              li{
+                margin: 0 auto 30px;
+                list-style-image: url("../images/circle.png");
+
+                h3{
+                  text-align: left;
+                }
+
+                p{
+                  text-align: left;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px){
+  html{
+    body{
+      main{
+        section{
+          article{
+            .head{
+              .description{
+                img{
+                  width: 50%;
+                  display: block;
+                  margin: 0 auto 20px;
+                  float: none;
+                }
+
+                p{
+                  width: 100%;
+                }
+              }
+            }
+
+            &.advantages{
+              ul{
+                li{
+                  margin-bottom: 20px;
+                  img{
+                    display: none;
+                  }
+                  p{
+                    display: block;
+                    opacity: 1;
+                    .scale(1);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and  (max-width: 884px){
+  html{
+    body{
+      header{
+        section{
+          .bottom{
+            .phone{
+              position: relative;
+              display: block;
+              text-align: center;
+              left: 0;
+              margin: 0 auto 40px;
+            }
+          }
+        }
+      }
+      main{
+        section{
+          article{
+            .head{
+              .description{
+                p{
+                  font-size: 2.2rem;
+                }
+              }
+            }
+            &.advantages{
+              ul{
+                li{
+                  width: 100%;
+                  margin-bottom: 50px;
+                  display: block;
+                  height: auto;
+
+                  h3{
+                    font-size: 2rem;
+                  }
+
+                  img{
+                    display: inline-block;
+                    position: relative;
+                    left: 0;
+                    margin: 0 auto 10px;
+                  }
+
+                  p{
+                    margin: auto;
+                    font-size: 2.2rem;
+                    position: relative;
+                    top: 0;
+                  }
+
+                  &:hover{
+                    img{
+                      .scale(1);
+                      opacity: 1;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  html{
+    body{
+      header{
+        section{
+          .bottom{
+            h1{
+              font-size: 3rem;
+            }
+          }
+        }
+      }
+
+      main{
+        section{
+          article{
+            &.swiper-container{
+              display: none;
+            }
+            .head{
+              .description{
+                img{
+                  width: 80%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 370px){
+
+  html{
+    body{
+      header{
+        section{
+          article{
+            &.bottom{
+              h1{
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
